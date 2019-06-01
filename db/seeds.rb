@@ -13,42 +13,42 @@ categories = Category.create!([
                               ])
 
 tests = Test.create!([
-                         {title: 'Ruby', level: 2, category_id: categories[1].id},
-                         {title: 'HTML', level: 1, category_id: categories[0].id},
-                         {title: 'Python', level: 3, category_id: categories[1].id},
-                         {title: 'Swift', level: 3, category_id: categories[2].id},
-                         {title: 'JS', level: 2, category_id: categories[0].id}
+                         {title: 'Ruby', level: 2, category: categories[1], author: users[0]},
+                         {title: 'HTML', level: 1, category: categories[0], author: users[0]},
+                         {title: 'Python', level: 3, category: categories[1], author: users[0]},
+                         {title: 'Swift', level: 3, category: categories[2], author: users[0]},
+                         {title: 'JS', level: 2, category: categories[0], author: users[0]}
                      ])
 
 questions = Question.create!([
-                                 {body: 'Who is Matz?', test_id: tests[0].id},
-                                 {body: 'What is HTML?', test_id: tests[1].id},
-                                 {body: 'Who is Gvido?', test_id: tests[2].id},
-                                 {body: 'Swift is language for Android or for iOS?', test_id: tests[3].id},
-                                 {body: 'What is Callback hell?', test_id: tests[4].id}
+                                 {body: 'Who is Matz?', test: tests[0]},
+                                 {body: 'What is HTML?', test: tests[1]},
+                                 {body: 'Who is Gvido?', test: tests[2]},
+                                 {body: 'Swift is language for Android or for iOS?', test: tests[3]},
+                                 {body: 'What is Callback hell?', test: tests[4]}
                              ])
 
 answers = Answer.create!([
-                             {body: 'He is Ruby creator', correct: true, question_id: questions[0].id},
-                             {body: 'He is Python creator', correct: false, question_id: questions[0].id},
-                             {body: 'He is JS creator', correct: false, question_id: questions[0].id},
-                             {body: 'HyperText Markup Language', correct: true, question_id: questions[1].id},
-                             {body: 'Hype Turbo Multi Language', correct: false, question_id: questions[1].id},
-                             {body: 'He is Python creator', correct: true, question_id: questions[2].id},
-                             {body: 'He is PHP creator', correct: false, question_id: questions[2].id},
-                             {body: 'For iOS', correct: true, question_id: questions[3].id},
-                             {body: 'For Android', correct: false, question_id: questions[3].id},
-                             {body: 'Second alias is noodles in JS', correct: true, question_id: questions[4].id},
-                             {body: 'I dont know', correct: false, question_id: questions[4].id}
+                             {body: 'He is Ruby creator', correct: true, question: questions[0]},
+                             {body: 'He is Python creator', correct: false, question: questions[0]},
+                             {body: 'He is JS creator', correct: false, question: questions[0]},
+                             {body: 'HyperText Markup Language', correct: true, question: questions[1]},
+                             {body: 'Hype Turbo Multi Language', correct: false, question: questions[1]},
+                             {body: 'He is Python creator', correct: true, question: questions[2]},
+                             {body: 'He is PHP creator', correct: false, question: questions[2]},
+                             {body: 'For iOS', correct: true, question: questions[3]},
+                             {body: 'For Android', correct: false, question: questions[3]},
+                             {body: 'Second alias is noodles in JS', correct: true, question: questions[4]},
+                             {body: 'I dont know', correct: false, question: questions[4]}
                          ])
 
 passed_tests = PassedTest.create!([
-                                      {user_id: users[0].id, test_id: tests[0].id, score: 10},
-                                      {user_id: users[0].id, test_id: tests[1].id, score: 8},
-                                      {user_id: users[0].id, test_id: tests[2].id, score: 4},
-                                      {user_id: users[1].id, test_id: tests[0].id, score: 10},
-                                      {user_id: users[1].id, test_id: tests[1].id, score: 6},
-                                      {user_id: users[0].id, test_id: tests[3].id, score: 8},
-                                      {user_id: users[0].id, test_id: tests[4].id, score: 8},
-                                      {user_id: users[1].id, test_id: tests[3].id, score: 6}
+                                      {user: users[0], test: tests[0], score: 10},
+                                      {user: users[0], test: tests[1], score: 8},
+                                      {user: users[0], test: tests[2], score: 4},
+                                      {user: users[1], test: tests[0], score: 10},
+                                      {user: users[1], test: tests[1], score: 6},
+                                      {user: users[0], test: tests[3], score: 8},
+                                      {user: users[0], test: tests[4], score: 8},
+                                      {user: users[1], test: tests[3], score: 6}
                                   ])

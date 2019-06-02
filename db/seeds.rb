@@ -2,8 +2,8 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 
 users = User.create!([
-                         {name: 'Gleb'},
-                         {name: 'Ivan'}
+                         {name: 'Gleb', email: 'gleb@email.ru'},
+                         {name: 'Ivan', email: 'ivan@email.ru'}
                      ])
 
 categories = Category.create!([
@@ -32,6 +32,7 @@ answers = Answer.create!([
                              {body: 'He is Ruby creator', correct: true, question: questions[0]},
                              {body: 'He is Python creator', correct: false, question: questions[0]},
                              {body: 'He is JS creator', correct: false, question: questions[0]},
+                             {body: 'He is PHP creator', correct: false, question: questions[0]},
                              {body: 'HyperText Markup Language', correct: true, question: questions[1]},
                              {body: 'Hype Turbo Multi Language', correct: false, question: questions[1]},
                              {body: 'He is Python creator', correct: true, question: questions[2]},

@@ -43,13 +43,3 @@ answers = Answer.create!([
                              {body: 'I dont know', correct: false, question: questions[4]}
                          ])
 
-passed_tests = PassedTest.create!([
-                                      {user: users[0], test: tests[0], score: 10},
-                                      {user: users[0], test: tests[1], score: 8},
-                                      {user: users[0], test: tests[2], score: 4},
-                                      {user: users[1], test: tests[0], score: 10},
-                                      {user: users[1], test: tests[1], score: 6},
-                                      {user: users[0], test: tests[3], score: 8},
-                                      {user: users[0], test: tests[4], score: 8},
-                                      {user: users[1], test: tests[3], score: 6}
-                                  ])

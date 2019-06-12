@@ -22,7 +22,7 @@ class TestPassage < ApplicationRecord
   end
 
   def percent_correct
-    (correct_questions * 100 / total_test_questions).round(2)
+    (correct_questions.to_f * 100 / total_test_questions).round(2)
   end
 
   def success?
@@ -30,7 +30,7 @@ class TestPassage < ApplicationRecord
   end
 
   def current_question_position
-    test.questions.index(current_question) + 1
+    test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
 
   private

@@ -1,6 +1,13 @@
-require 'digest/sha1'
-
 class User < ApplicationRecord
+
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable,
+         :trackable,
+         :confirmable
+
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
   has_many :authored_tests, class_name: 'Test', foreign_key: :author_id,
@@ -10,8 +17,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: true,
                     format: { with: URI::MailTo::EMAIL_REGEXP,
                               message: 'Формат почты: name@post.com' }
-
-  has_secure_password
 
   def test_by_level(level)
     tests.where(level: level)

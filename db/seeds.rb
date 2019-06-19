@@ -2,8 +2,9 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 
 users = User.create!([
-                         {name: 'Gleb', email: 'gleb@email.ru'},
-                         {name: 'Ivan', email: 'ivan@email.ru'}
+                         {first_name: 'Gleb', email: 'gleb@email.ru', password: '123456'},
+                         {first_name: 'Ivan', email: 'ivan@email.ru', password: '123456'},
+                         {first_name: 'Petr', email: 'petr@email.ru', password: '123456'}
                      ])
 
 categories = Category.create!([

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin Panel | TestGuru</title>
+  <title><%= t('.panel') %> | <%= t('shared.navbar.header') %></title>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +11,7 @@
 <body>
 <%= render 'admin/nav' %>
 <%= render 'shared/flash' %>
-<%= render 'shared/footer' %>
 <%= yield %>
+<%= render 'shared/footer' %>
 </body>
 </html>

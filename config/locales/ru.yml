@@ -71,7 +71,7 @@ ru:
       actions: "Действия"
 
   shared:
-    navbar:
+    nav:
       header: "Тест Гуру"
       welcome: "Добро пожаловать, "
       logout: "Выход"

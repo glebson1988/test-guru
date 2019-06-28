@@ -71,7 +71,7 @@ en:
       actions: "Actions"
 
   shared:
-    navbar:
+    nav:
       header: "Test Guru"
       welcome: "Welcome, "
       logout: "Logout"

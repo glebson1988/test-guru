@@ -23,6 +23,7 @@ ru:
     tests:
       index:
         new_test: "Создать тест"
+        ban: "Недостаточно прав для просмотра контента"
       create:
         success: "Тест успешно создан."
       edit:
@@ -38,7 +39,7 @@ ru:
         questions: "Вопросы теста"
         edit_test: "Редактировать тест"
     nav:
-      header: "Админка ТестГуру"
+      header: "Админка"
 
   helpers:
     submit:

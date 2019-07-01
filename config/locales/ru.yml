@@ -97,6 +97,9 @@ ru:
       question_num: "Вопрос № "
       from: " из"
       next: "Далее"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   layouts:
     admin:

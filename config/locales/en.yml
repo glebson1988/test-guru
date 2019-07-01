@@ -95,6 +95,9 @@ en:
       question_num: "Question № "
       from: " from"
       next: "Next"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
 
   layouts:
     admin:

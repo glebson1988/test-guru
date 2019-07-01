@@ -8,7 +8,7 @@ class Admin::BaseController < ApplicationController
   private
 
   def admin_required!
-    redirect_to root_path, alert: 'Недостаточно прав для просмотра контента.' unless current_user.admin?
+    redirect_to root_path, alert: t('admin.tests.index.ban') unless current_user.admin?
   end
 
 end

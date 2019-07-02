@@ -40,6 +40,12 @@ en:
         edit_test: "Edit test"
     nav:
       header: "Admin panel"
+    gists:
+      index:
+        header: "Created gists"
+        question: "Question"
+        url: "Gist url"
+        email: "User email"
 
   helpers:
     submit:
@@ -95,9 +101,18 @@ en:
       question_num: "Question № "
       from: " from"
       next: "Next"
+      gist_question: "Gist question"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
+      view_gist: "View Gist on GitHub"
 
   layouts:
     admin:
       panel: "Admin Panel"
+
+  services:
+    gist_question_service:
+      desc: "A question from test %{title} (TestGuru)"
 
 

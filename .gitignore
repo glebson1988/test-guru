@@ -32,3 +32,6 @@
 
 # Ignore IDE ./idea
 /.idea
+
+# Ignore .env
+/.env

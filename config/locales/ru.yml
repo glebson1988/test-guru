@@ -40,6 +40,12 @@ ru:
         edit_test: "Редактировать тест"
     nav:
       header: "Админка"
+    gists:
+      index:
+        header: "Гисты"
+        question: "Вопрос"
+        url: "Url гиста"
+        email: "Почта"
 
   helpers:
     submit:
@@ -97,13 +103,19 @@ ru:
       question_num: "Вопрос № "
       from: " из"
       next: "Далее"
+      gist_question: "Сохранить gist"
     gist:
       success: "Gist успешно сохранен!"
       failure: "Во время сохранения gist произошла ошибка"
+      view_gist: "Посмотреть Gist на GitHub"
 
   layouts:
     admin:
       panel: "Панель администратора"
+
+  services:
+    gist_question_service:
+      desc: "Вопрос из теста %{title} (TestGuru)"
 
 
 

@@ -13,4 +13,8 @@ module ApplicationHelper
         alert: 'alert-danger'
     }[key.to_sym]
   end
+
+  def not_gists_page?
+    request.original_url.exclude?('/gists')
+  end
 end

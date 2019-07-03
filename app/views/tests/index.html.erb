@@ -1,10 +1,15 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4"><h1><%= t('.header') %></h1></div>
+
   <div class="col-12">
     <table class="table table-striped">
       <thead>
       <tr>
-        <th><%= t('.name') %></th>
+        <th class="sort-by-title pointer">
+          <%= t('.name') %>
+          <%= octicon 'arrow-up', class: 'text-success hide' %>
+          <%= octicon 'arrow-down', class: 'text-success hide' %>
+        </th>
         <th><%= t('.category') %></th>
         <th><%= t('.level') %></th>
         <th><%= t('.quest_count') %></th>

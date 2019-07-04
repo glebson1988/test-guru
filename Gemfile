@@ -34,6 +34,7 @@ gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 #UI
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.3.1'
+gem 'octicons_helper'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

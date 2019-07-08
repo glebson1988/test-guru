@@ -26,7 +26,6 @@ function passwordCheck() {
             password.classList.add('border-red');
             confirmation.classList.add('border-red');
         }
-
     } else {
         match.add('hide');
         notMatch.add('hide');
@@ -34,5 +33,3 @@ function passwordCheck() {
         confirmation.classList.remove('border-red');
     }
 }
-
-

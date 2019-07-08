@@ -32,6 +32,8 @@ en:
         new_test: "Create new test"
       test:
         del_confirm: "Delete test %{title}?"
+      form_inline:
+        submit: "Ok"
       show:
         test: "Test"
         level: "Level"

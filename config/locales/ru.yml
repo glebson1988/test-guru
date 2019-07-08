@@ -38,6 +38,8 @@ ru:
         new_question: "Создать вопрос"
         questions: "Вопросы теста"
         edit_test: "Редактировать тест"
+      form_inline:
+        submit: "Ok"
     nav:
       header: "Админка"
     gists:

@@ -4,7 +4,7 @@
 users = User.create!([
                          {first_name: 'admin',
                           last_name: 'administrator',
-                          email:'admin@email.ru',
+                          email:'glebson1988@yandex.ru',
                           password: 'qwerty',
                           password_confirmation: 'qwerty',
                           type: 'Admin'}

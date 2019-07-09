@@ -34,7 +34,7 @@ class TestPassage < ApplicationRecord
   end
 
   def progress_percent
-    ((current_question_position).to_f / total_test_questions) * 100
+    ((current_question_position - 1).to_f / total_test_questions) * 100
   end
 
   private

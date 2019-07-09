@@ -1,8 +1,10 @@
 <div class="card text-center">
-  <div class="card-body"><br>
+  <div class="card-body">
     <%= current_year %>
     <br>
     <%= github_url("glebson1988", "test-guru") %><br>
     Тест Гуру <br>
-    <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'https://thinknetica.com', target: '_blank' %></div>
+    <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'https://thinknetica.com', target: '_blank' %>
+    <p><%= link_to 'Обратная связь', new_feedback_path %></p>
+  </div>
 </div>

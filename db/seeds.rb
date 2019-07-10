@@ -4,7 +4,7 @@
 users = User.create!([
                          {first_name: 'admin',
                           last_name: 'administrator',
-                          email:'admin@email.ru',
+                          email:'glebson1988@yandex.ru',
                           password: 'qwerty',
                           password_confirmation: 'qwerty',
                           type: 'Admin'}
@@ -25,25 +25,24 @@ tests = Test.create!([
                      ])
 
 questions = Question.create!([
-                                 {body: 'Who is Matz?', test: tests[0]},
-                                 {body: 'What is HTML?', test: tests[1]},
-                                 {body: 'Who is Gvido?', test: tests[2]},
-                                 {body: 'Swift is language for Android or for iOS?', test: tests[3]},
-                                 {body: 'What is Callback hell?', test: tests[4]}
+                                 {body: 'Кто такой Matz?', test: tests[0]},
+                                 {body: 'Что такое HTML?', test: tests[1]},
+                                 {body: 'Кто такой Gvido?', test: tests[2]},
+                                 {body: 'Swift это ЯП под Android или под iOS?', test: tests[3]},
+                                 {body: 'Что такое Callback hell?', test: tests[4]}
                              ])
 
 answers = Answer.create!([
-                             {body: 'He is Ruby creator', correct: true, question: questions[0]},
-                             {body: 'He is Python creator', correct: false, question: questions[0]},
-                             {body: 'He is JS creator', correct: false, question: questions[0]},
-                             {body: 'He is PHP creator', correct: false, question: questions[0]},
+                             {body: 'Создатель языка Руби', correct: true, question: questions[0]},
+                             {body: 'Создатель языка Пайтон', correct: false, question: questions[0]},
+                             {body: 'Создатель яыка JS', correct: false, question: questions[0]},
+                             {body: 'Создатель языка PHP', correct: false, question: questions[0]},
                              {body: 'HyperText Markup Language', correct: true, question: questions[1]},
                              {body: 'Hype Turbo Multi Language', correct: false, question: questions[1]},
-                             {body: 'He is Python creator', correct: true, question: questions[2]},
-                             {body: 'He is PHP creator', correct: false, question: questions[2]},
-                             {body: 'For iOS', correct: true, question: questions[3]},
-                             {body: 'For Android', correct: false, question: questions[3]},
-                             {body: 'Second alias is noodles in JS', correct: true, question: questions[4]},
-                             {body: 'I dont know', correct: false, question: questions[4]}
+                             {body: 'Создатель языка Пайтон', correct: true, question: questions[2]},
+                             {body: 'Создатель языка PHP', correct: false, question: questions[2]},
+                             {body: 'Под iOS', correct: true, question: questions[3]},
+                             {body: 'Под Android', correct: false, question: questions[3]},
+                             {body: 'В JS есть второй псевдоним - лапша', correct: true, question: questions[4]},
+                             {body: 'Это такая игрушка', correct: false, question: questions[4]}
                          ])
-

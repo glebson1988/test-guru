@@ -19,7 +19,7 @@ en:
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:
-        welcome: 'Welcome'
+        welcome: 'Welcome, %{email}!'
         you_can_confirm: 'You can confirm your account email through the link below'
         subject: "Confirmation instructions"
         confirm_my_account: 'Confirm my account'

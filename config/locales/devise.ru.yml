@@ -16,7 +16,7 @@ ru:
       unconfirmed: "Вы должны подтвердить вашу учётную запись."
     mailer:
       confirmation_instructions:
-        welcome: 'Добро пожаловать %{email}!'
+        welcome: 'Добро пожаловать, %{email}!'
         you_can_confirm: 'Подтвердите аккаунт, перейдя по ссылке ниже'
         confirm_my_account: 'Подтвердить аккаунт'
         subject: "Инструкции по подтверждению учётной записи."

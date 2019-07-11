@@ -1,6 +1,6 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<% if @test_passage.success? %>
+<% if !@test_passage.passed_time(@test_passage) && @test_passage.success? %>
   <p>
     <%= t('.result') %><span class="success"><%= @test_passage.percent_correct %></span>%. <%= t('.success') %>
   </p>
@@ -9,4 +9,5 @@
     <%= t('.result') %><span class="fail"><%= @test_passage.percent_correct %></span>%. <%= t('.fail') %>
   </p>
 <% end %>
+
 <%= link_to t('.link_back'), tests_path %>

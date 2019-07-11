@@ -37,6 +37,11 @@ class TestPassage < ApplicationRecord
     ((current_question_position - 1).to_f / total_test_questions) * 100
   end
 
+  def passed_time(test_passage)
+    time = (test_passage.created_at + test_passage.test.timer - Time.now).to_i
+    time <= 0 ? nil : time
+  end
+
   private
 
   def before_validation_set_question

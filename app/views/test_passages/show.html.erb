@@ -12,6 +12,10 @@
     <%= t('.from') %>
     <%= @test_passage.total_test_questions %>
   </b>
+  <%= content_tag :div,
+                  "#{ t('.time_left') } #{ @test_passage.passed_time(@test_passage) }",
+                  class: 'timer',
+                  data: { timer: @test_passage.passed_time(@test_passage), id: @test_passage.id }  %>
 </p>
 
 <div class="progress">
@@ -20,6 +24,7 @@
     <%= @test_passage.progress_percent %>
   </div>
 </div>
+<br>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers,

@@ -13,9 +13,9 @@
     <%= @test_passage.total_test_questions %>
   </b>
   <%= content_tag :div,
-                  "#{ t('.time_left') } #{ @test_passage.passed_time(@test_passage) }",
+                  "#{ t('.time_left') } #{ @test_passage.time_left(@test_passage) }",
                   class: 'timer',
-                  data: { timer: @test_passage.passed_time(@test_passage), id: @test_passage.id }  %>
+                  data: { timer: @test_passage.time_left(@test_passage) } %>
 </p>
 
 <div class="progress">

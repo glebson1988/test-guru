@@ -104,6 +104,8 @@ en:
       from: " from"
       next: "Next"
       gist_question: "Gist question"
+      time_left: "Time left for test:"
+
     gist:
       success: "Gist was successfully created!"
       failure: "An error occurred while saving gist"

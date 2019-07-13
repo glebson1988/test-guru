@@ -9,7 +9,7 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_question, on: %i[create update]
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_out?
   end
 
   def accept!(answer_ids)
@@ -34,7 +34,15 @@ class TestPassage < ApplicationRecord
   end
 
   def progress_percent
-    ((current_question_position - 1).to_f / total_test_questions) * 100
+    (((current_question_position - 1).to_f / total_test_questions) * 100).round(2)
+  end
+
+  def time_out?
+    (test.timer - (Time.now - created_at)).to_i <= 0
+  end
+
+  def time_left(test_passage)
+    test_passage.test.timer - (Time.now - test_passage.created_at).to_i if test_passage.test.timer > 0
   end
 
   private

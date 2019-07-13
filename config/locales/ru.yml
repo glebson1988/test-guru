@@ -106,6 +106,7 @@ ru:
       from: " из"
       next: "Далее"
       gist_question: "Сохранить gist"
+      time_left: "Осталось времени на тест:"
     gist:
       success: "Gist успешно сохранен!"
       failure: "Во время сохранения gist произошла ошибка"

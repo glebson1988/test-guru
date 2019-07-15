@@ -48,6 +48,9 @@ ru:
         question: "Вопрос"
         url: "Url гиста"
         email: "Почта"
+    badges:
+      create:
+        success: "Бейдж успешно создан"
 
   helpers:
     submit:

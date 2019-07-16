@@ -51,6 +51,16 @@ en:
     badges:
       create:
         success: "Badge was successfully created"
+      edit:
+        edit_title: "Edit badge"
+      index:
+        header: "Badges"
+        new_badge: "Create new badge"
+        name: "Name"
+        image: "Image"
+        rule: "Rule"
+      show:
+        user: "User"
 
   helpers:
     submit:

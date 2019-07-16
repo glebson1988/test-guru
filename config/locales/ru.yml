@@ -51,6 +51,16 @@ ru:
     badges:
       create:
         success: "Бейдж успешно создан"
+      edit:
+        edit_title: "Редактировать бейдж"
+      index:
+        header: "Бейджи"
+        new_badge: "Создать новый бейдж"
+        name: "Название"
+        image: "Лого"
+        rule: "Правило"
+      show:
+        user: "Пользователь"
 
   helpers:
     submit:

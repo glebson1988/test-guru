@@ -4,5 +4,5 @@ class Badge < ApplicationRecord
 
   validates :name, :image, presence: true
 
-  RULES = %i[success_category success_first_try success_level]
+  RULES = %i[success_category success_on_first_try success_all_level].freeze
 end

@@ -1,0 +1,17 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4"><h1><%= t('admin.badges.index.header') %></h1></div>
+
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th><%= t('admin.badges.index.name') %></th>
+        <th><%= t('admin.badges.index.image') %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @badges %>
+      </tbody>
+    </table>
+  </div>
+</div>

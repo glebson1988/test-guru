@@ -5,8 +5,9 @@
     <%= t('shared.nav.welcome') %><b class="nav-admin user-email">
     <%=  current_user.first_name.capitalize %></b>
     <% if not_gists_page? %> |
-      <%= link_to t('admin.gists.index.header'), admin_gists_path %>
-    <% end %> |
+      <%= link_to t('admin.gists.index.header'), admin_gists_path %> |
+      <%= link_to t('admin.badges.index.header'), admin_badges_path %> |
+    <% end %>
     <%=  link_to t("shared.nav.logout"), destroy_user_session_path, method: :delete %>
   </div>
 </nav>

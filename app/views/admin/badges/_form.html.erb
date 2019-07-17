@@ -3,8 +3,8 @@
 
   <div class="form-group">
     <p>
-      <%= form.label :name %>
-      <%= form.select :name, options_for_select(Badge::RULES), prompt: true, class: "custom-select" %>
+      <%= form.label :rule %>
+      <%= form.select :rule, options_for_select(Badge::RULES), prompt: true, class: "custom-select" %>
     </p>
 
     <p>
@@ -13,8 +13,8 @@
     </p>
 
     <p>
-      <%= form.label :rule %>
-      <%= form.text_field :rule %>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
     </p>
 
     <p><%= form.submit class: "btn btn-primary" %></p>

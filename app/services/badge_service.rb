@@ -8,15 +8,18 @@ class BadgeService
 
   def call
     Badge.all.find_each do |badge|
-      create_badge(badge.name) if send("passed_#{badge.name}?", badge.rule)
+      create_badge(badge.rule) if send("passed_#{badge.rule}?", badge.name) && no_badge?(badge)
     end
   end
 
   private
 
-  def passed_success_category?(title)
-    category = Category.find_by(title: title)
-    success_tests.map(&:test_id).uniq.count == category.tests.count
+  def no_badge?(badge)
+    badge.rule == 'success_on_first_try' ? true : !@user.badges.include?(badge)
+  end
+
+  def success_tests
+    TestPassage.where(user: @user, test: @test, current_question: nil).select(&:success?)
   end
 
   def passed_success_on_first_try?(stub_param)
@@ -27,8 +30,9 @@ class BadgeService
     Test.where(level: level).map(&:id) == success_tests.map(&:test_id).uniq
   end
 
-  def success_tests
-    TestPassage.where(user: @user, test: @test, current_question: nil).select(&:success?)
+  def passed_success_category?(title)
+    category = Category.find_by(title: title)
+    success_tests.map(&:test_id).uniq.count == category.tests.count
   end
 
   def create_badge(rule)

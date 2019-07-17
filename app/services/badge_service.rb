@@ -7,8 +7,12 @@ class BadgeService
   end
 
   def call
-    Badge.all.find_each do |badge|
-      create_badge(badge.rule) if send("passed_#{badge.rule}?", badge.name) && no_badge?(badge)
+    get_badge if @test_passage.success_finished?
+  end
+
+  def get_badge
+    Badge.find_each do |badge|
+      @user.badges << badge if send("#{badge.rule}?", badge.parameter) && no_badge?(badge)
     end
   end
 
@@ -18,26 +22,21 @@ class BadgeService
     badge.rule == 'success_on_first_try' ? true : !@user.badges.include?(badge)
   end
 
-  def success_tests
-    TestPassage.where(user: @user, test: @test, current_question: nil).select(&:success?)
+  def user_passed_tests
+    @passed_test_ids ||= @user.test_passages.passed.pluck(:test_id).uniq
   end
 
-  def passed_success_on_first_try?(stub_param)
-    TestPassage.where(user: @user, test: @test).count == 1 if @test_passage.success?
+  def success_on_first_try?(parameter_stub)
+    @user.tests.where(id: @test.id).count == 1
   end
 
-  def passed_success_all_level?(level)
-    Test.where(level: level).map(&:id) == success_tests.map(&:test_id).uniq
+  def success_all_level?(level)
+    # TODO
   end
 
-  def passed_success_category?(title)
-    category = Category.find_by(title: title)
-    success_tests.map(&:test_id).uniq.count == category.tests.count
+  def success_category?(category)
+    all_category_tests = Test.sort_by_categories(category.capitalize).ids.uniq
+    (all_category_tests - user_passed_tests).empty?
   end
 
-  def create_badge(rule)
-    badge = Badge.find_by(rule: rule)
-    badge_record = @user.user_badges.create(badge: badge)
-    badge_record.save!
-  end
 end

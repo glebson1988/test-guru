@@ -1,12 +1,12 @@
 class TestPassage < ApplicationRecord
 
-  PASSING_SCORE = 85
-
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question, on: %i[create update]
+
+  scope :passed, -> { where('result >= 85') }
 
   def completed?
     current_question.nil? || time_out?
@@ -14,6 +14,7 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.result = percent_correct
     save!
   end
 
@@ -26,8 +27,13 @@ class TestPassage < ApplicationRecord
   end
 
   def success?
-    percent_correct >= PASSING_SCORE
+    percent_correct >= 85
   end
+
+  def success_finished?
+    completed? && success?
+  end
+
 
   def current_question_position
     test.questions.order(:id).where('id < ?', current_question.id).count + 1

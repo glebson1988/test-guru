@@ -59,6 +59,7 @@ ru:
         name: "Название"
         image: "Лого"
         rule: "Правило"
+        parameter: "Параметр"
       show:
         user: "Пользователь"
 

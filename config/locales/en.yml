@@ -59,6 +59,7 @@ en:
         name: "Name"
         image: "Image"
         rule: "Rule"
+        parameter: "Parameter"
       show:
         user: "User"
 

@@ -31,7 +31,8 @@ class BadgeService
   end
 
   def success_all_level?(level)
-    # TODO
+    all_level_tests = Test.by_level(level).ids.uniq
+    (all_level_tests - user_passed_tests).empty? if all_level_tests
   end
 
   def success_category?(category)

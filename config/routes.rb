@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'tests#index'
+  get 'badges', to: 'user_badges#index'
 
   devise_for :users,
              controllers: {sessions: "sessions"},
@@ -30,5 +31,4 @@ Rails.application.routes.draw do
   end
 
   resources :feedbacks, only: %i[new create]
-  resources :badges, only: :index
 end

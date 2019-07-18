@@ -144,4 +144,9 @@ en:
       feedback: "Your message"
       submit: "Submit"
 
+  user_badges:
+    index:
+      header_one: "Earned badges"
+      header_two: "All badges"
+
 

@@ -145,5 +145,10 @@ ru:
       feedback: "Ваше сообщение"
       submit: "Отправить"
 
+  user_badges:
+    index:
+      header_one: "Заработанные бейджи"
+      header_two: "Все доступные бейджи"
+
 
 

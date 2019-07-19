@@ -19,9 +19,7 @@ class Test < ApplicationRecord
       .order(title: :desc)
   }
   scope :passed, -> { joins(:test_passages).merge(TestPassage.passed).distinct }
-  scope :by_level, -> (parameter) { levels =
-                                  { easy: 0..1, medium: 2..4, hard: 5..Float::INFINITY }
-                                  where(level: levels[parameter.to_sym]) }
+  scope :by_level, -> (level) { where(level: level) }
 
   def self.sort_categories(category)
     sort_by_categories(category).pluck(:title)

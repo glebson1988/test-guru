@@ -30,11 +30,6 @@ class TestPassage < ApplicationRecord
     percent_correct >= 85
   end
 
-  def success_finished?
-    completed? && success?
-  end
-
-
   def current_question_position
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end

@@ -4,7 +4,7 @@
   <div class="form-group">
     <p>
       <%= form.label :rule %>
-      <%= form.select :rule, options_for_select(Badge::RULES), prompt: true, class: "custom-select" %>
+      <%= form.select :rule, badges_rules , prompt: true, class: "custom-select" %>
     </p>
 
     <p>

@@ -7,13 +7,7 @@ class BadgeService
   end
 
   def call
-    get_badge if @test_passage.success_finished?
-  end
-
-  def get_badge
-    Badge.find_each do |badge|
-      @user.badges << badge if send("#{badge.rule}?", badge.parameter) && no_badge?(badge)
-    end
+    Badge.select { |badge| send("#{badge.rule}?", badge.parameter) if no_badge?(badge) }
   end
 
   private
@@ -31,13 +25,14 @@ class BadgeService
   end
 
   def success_all_level?(level)
+    return unless @test.level == level
     all_level_tests = Test.by_level(level).ids.uniq
     (all_level_tests - user_passed_tests).empty? if all_level_tests
   end
 
   def success_category?(category)
+    return unless @test.category_id == category
     all_category_tests = Test.sort_by_categories(category.capitalize).ids.uniq
     (all_category_tests - user_passed_tests).empty?
   end
-
 end

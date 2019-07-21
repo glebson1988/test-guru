@@ -4,7 +4,10 @@
   <div class="form-group">
     <p>
       <%= form.label :rule %>
-      <%= form.select :rule, badges_rules , prompt: true, class: "custom-select" %>
+      <%= form.select(:rule, [[t('.success_category'), category_rule],
+                              [t('.first_try'), first_try_rule],
+                              [t('.all_level'), level_rule]],
+                      prompt: t('.prompt')) %>
     </p>
 
     <p>

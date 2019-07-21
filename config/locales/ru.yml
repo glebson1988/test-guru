@@ -62,6 +62,11 @@ ru:
         parameter: "Параметр"
       show:
         user: "Пользователь"
+      form:
+        success_category: "Все тесты из категории"
+        first_try: "Пройдено с первой попытки"
+        all_level: "Все тесты одного уровня"
+        prompt: "Выберите правило"
 
   helpers:
     submit:

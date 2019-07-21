@@ -62,6 +62,11 @@ en:
         parameter: "Parameter"
       show:
         user: "User"
+      form:
+        success_category: "All tests from category"
+        first_try: "Passed from the first attempt"
+        all_level: "All tests of the same level"
+        prompt: "Select rule"
 
   helpers:
     submit:

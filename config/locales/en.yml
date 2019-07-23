@@ -48,6 +48,25 @@ en:
         question: "Question"
         url: "Gist url"
         email: "User email"
+    badges:
+      create:
+        success: "Badge was successfully created"
+      edit:
+        edit_title: "Edit badge"
+      index:
+        header: "Badges"
+        new_badge: "Create new badge"
+        name: "Name"
+        image: "Image"
+        rule: "Rule"
+        parameter: "Parameter"
+      show:
+        user: "User"
+      form:
+        success_category: "All tests from category"
+        first_try: "Passed from the first attempt"
+        all_level: "All tests of the same level"
+        prompt: "Select rule"
 
   helpers:
     submit:
@@ -129,5 +148,10 @@ en:
       email: "Your email"
       feedback: "Your message"
       submit: "Submit"
+
+  user_badges:
+    index:
+      header_one: "Earned badges"
+      header_two: "All badges"
 
 

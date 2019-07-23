@@ -18,8 +18,8 @@ class Test < ApplicationRecord
       .where(categories: { title: category })
       .order(title: :desc)
   }
-  scope :passed, -> { joins(:test_passages).merge(TestPassage.passed).distinct }
   scope :by_level, -> (level) { where(level: level) }
+  scope :by_category_id, -> (category_id) { where(category_id: category_id) }
 
   def self.sort_categories(category)
     sort_by_categories(category).pluck(:title)

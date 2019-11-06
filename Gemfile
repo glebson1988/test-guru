@@ -43,7 +43,7 @@ gem 'octicons_helper'
 # gem 'capistrano-rails', group: :development
 
 # AUTH
-gem 'devise', '~> 4.0'
+gem 'devise', '~> 4.7'
 
 # Networking
 gem 'faraday'

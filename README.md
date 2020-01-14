@@ -1,7 +1,11 @@
-# http://test-guru-glebson.herokuapp.com/
+# Test Guru is an application for creating / passing tests.
 
-Сущности проекта:
-- Пользователи
-- Тесты
-- Вопросы
-- Ответы
+### Objects:
+- Admin
+- User
+- Test
+- Question
+- Answer
+- Category
+
+[Heroku](http://test-guru-glebson.herokuapp.com/)

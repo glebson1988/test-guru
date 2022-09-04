@@ -7,5 +7,3 @@
 - Question
 - Answer
 - Category
-
-[Heroku](http://test-guru-glebson.herokuapp.com/)
